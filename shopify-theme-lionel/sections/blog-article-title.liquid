@@ -1,0 +1,82 @@
+<div  id="article-des-{{ section.id }}">
+  {{ article.excerpt_or_content }}
+</div>
+
+<style>
+  @media(max-width:749px){
+    #article-des-{{ section.id }}{
+      padding-left:0px;
+      padding-right:0px;
+    }    
+    #article-des-{{ section.id }} table{
+      table-layout: auto;
+      word-break: break-word;
+      margin-left:0;
+      margin-right:0;
+      width:100% !important;
+    }
+    #article-des-{{ section.id }} td{
+      padding:3px;
+    }    
+    #article-des-{{ section.id }} table p{
+      margin:0px auto;
+    } 
+    #article-des-{{ section.id }} table h1{
+      margin:0px auto;
+    }
+    #article-des-{{ section.id }} table h2{
+      margin:0px auto;
+    }  
+    #article-des-{{ section.id }} table h3{
+      margin:0px auto;
+    }
+    #article-des-{{ section.id }} table h4{
+      margin:0px auto;
+    } 
+    #article-des-{{ section.id }} table h5{
+      margin:0px auto;
+    }
+    #article-des-{{ section.id }} table h6{
+      margin:0px auto;
+    }     
+  }
+  @media(min-width:750px){
+    #article-des-{{ section.id }} table p{
+      margin:10px auto;
+    } 
+    #article-des-{{ section.id }} table h1{
+      margin:10px auto;
+    }
+    #article-des-{{ section.id }} table h2{
+      margin:10px auto;
+    }  
+    #article-des-{{ section.id }} table h3{
+      margin:10px auto;
+    }
+    #article-des-{{ section.id }} table h4{
+      margin:10px auto;
+    } 
+    #article-des-{{ section.id }} table h5{
+      margin:10px auto;
+    }
+    #article-des-{{ section.id }} table h6{
+      margin:10px auto;
+    }     
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "文章标题(定制)",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "info": "Only has effect when spacing is set to none.",
+      "default": false
+    }
+  ],
+    "presets": [{ "name": "文章标题(定制) " }]
+  }
+{% endschema %}

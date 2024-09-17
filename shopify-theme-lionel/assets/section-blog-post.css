@@ -173,3 +173,11 @@
 .article-template__back:last-child {
   margin-bottom: 3.2rem;
 }
+
+.article-template__paragraph {
+  display: flex;
+  /* justify-content: space-between; */
+}
+.article-template__img-left {
+
+}

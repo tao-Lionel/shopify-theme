@@ -87,7 +87,7 @@
           class="
             article-template__paragraph page-width page-width--narrow
             {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}
-            article-template__img-left
+            {% if block.settings.paragraph_iamge_postion == 'left'  %} article-template__img-left {% endif %}
           "
           {{ block.shopify_attributes }}
         >
@@ -106,7 +106,6 @@
             <img
               src="{{ block.settings.paragraph_image | image_url: width: 200, height: 200}}"
               alt="{{block.settings.paragraph_image.alt}}"
-              ,
               width="200"
               height="200"
             >
@@ -458,7 +457,8 @@
               "value": "right",
               "label": "居右"
             }
-          ]
+          ],
+          "default":"right"
         }
       ]
     }
